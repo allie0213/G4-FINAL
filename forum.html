@@ -62,8 +62,8 @@
                     <a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
                 </div>
                 <ul class="mainMenu menu">
-                    <li><a class="onThisPage" href="#">觀星活動</a></li>
-                    <li><a href="forum.html">星際論壇</a></li>
+                    <li><a href="activity.php">觀星活動</a></li>
+                    <li><a  class="onThisPage" href="#">星際論壇</a></li>
                     <li><a href="photo.html">照片牆</a></li>
                     <li><a href="article.html">星知識</a></li>
                     <li><a href="#">新手村</a></li>
@@ -105,7 +105,7 @@
             <h1>星際論壇</h1>
         </div>
         <div class="f_desc">
-            <h3>找同好、聊天文、觀星象</h3>
+            <h3>星星的大小事 一起加入討論</h3>
             <!-- <h3>加入討論</h3> -->
             <!-- <i class="fa fa-angle-double-down" aria-hidden="true"></i> -->
         </div>
@@ -121,7 +121,7 @@
                 <!-- 論壇內容選單 -->
                 <div class="f_fn_area text-right">
                     <button class="btn-lg btn-blue" id="postForum">
-                        <a href="#">發表文章</a></button>
+                        <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>發表文章</a></button>
                     <div class="f_search">
                         <input id="f-searchForum" type="text" name="" placeholder="找你有興趣的天文主題...">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -152,16 +152,52 @@
                             <!-- 頁籤1  id:bg-0 綜合討論的內容 -->
                             <div class="colorful-tab-content active" id="bg-0">
                                 <!-- f_posts 多個長方體條列 顯示5條 多得分頁-->
-                                <div class="ff_posts f_posts-1 postGroup" id="f_posts01"></div>
+                                <div class="ff_posts f_posts-1 postGroup" id="f_posts01">
+                                    <!-- ff_post 每個長方體-->
+          <div class="ff_post">
+              <div id="box">
+                <figure class="front">
+                    <div class="box-content">
+                        <h3 class="topic"><i class="fa fa-sticky-note" aria-hidden="true"></i><a href="#">主題：如何拍攝星軌跟銀河？</a></h3>
+                  
+                        <div class="f_user">
+                            <img src="img/p_people.jpg" width="30" height="30">
+                            <p><a href="">Katie918</a></p>
+                            <p>2017-01-01發表</p>
+                        </div>
+                    
+                        <div class="f_response">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>100</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>2</p>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <p>2</p>
+
+                        </div>
+                    </div>
+                </figure>
+                <figure class="back">
+                    <div class="box-content">
+                        <p><a href="#">每次看到大家分享的星軌照片都好美麗，自己嘗試了幾次，拍得都不太優耶，不知道是過曝時間太短害怎樣，想請問大大們都是如何拍攝...</a></p>
+                    </div>
+                </figure>
+                <figure class="right"></figure>
+                <figure class="left"></figure>
+                <figure class="top"></figure>
+                <figure class="bottom"></figure>
+              </div>
+          </div>
+                                </div>
 
                                 <!--post_text 點進主題後，貼文內容 -->
                                 <div class="post_text" style="display: none">
                                     <div class="main">
-                                        <h3>主題：武嶺觀星攝影心得分享</h3>
+                                        <h3>主題：如何拍攝星軌和銀河？</h3>
                                         <div class="f_sub_user">
-                                            <img src="img/forum/f_005.png" width="80" height="80">
+                                            <img src="img/p_people.jpg" width="80" height="80">
                                             <div class="f_user_info">
-                                                <span class="id">Allie213</span>
+                                                <span class="id">Katie918</span>
                                                 <!-- <span class="user_level">星際過客</span> -->
                                                 <p>2017-01-01 12:00發表</p>
                                             </div>
@@ -170,13 +206,13 @@
                                             <i class="fa fa-eye" aria-hidden="true"></i><span class="viewCount"></span>
                                             <i class="fa fa-star-o" aria-hidden="true"></i><span class="collCount"></span>
                                             <i class="fa fa-share-square-o" aria-hidden="true"></i><span class="shareCount"></span>
-                                             <div class="socialPop">
+                                             <div class="socialPop" style="display: none;">
                                                     <i class="fa fa-facebook-official" aria-hidden="true"></i>
                                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                                 </div>
                                         </div>
-                                        <div class="text"></div>
+                                        <div class="text">每次看到大家分享的星軌照片都好美麗，自己嘗試了幾次，拍得都不太優耶，不知道是過曝時間太短害怎樣，想請問大大們都是如何拍攝的？</div>
                                         <!-- 回覆&檢舉 -->
                                         <div class="f_btn">
                                             <button class="reportPla"><input type="hidden" value=""><a href="">檢舉</a></button>
@@ -189,9 +225,11 @@
                                     <div class="main response-box msgArea">
                                         <h5>我要回應</h5>
                                         <textarea style="width: 100%;height: 100px;"></textarea>
-                                        <input class="postMsg" type="submit" name="" value="送出">
-                                        <input type="hidden" value="">
-                                        <div class="clear"></div>
+                                       
+                                            <input class="postMsg" type="submit" name="" value="送出">
+                                            <input type="hidden" value="">
+                                            <div class="clear"></div>
+                                      
                                     </div>
                                 </div>
                                 <!-- post-txet	end -->
@@ -207,7 +245,7 @@
                                                 <img src="img/forum/f_005.png" width="80" height="80">
                                                 <div class="f_user_info">
                                                     <span class="id">Allie213</span>
-                                                    <!-- <span class="user_level">星際過客</span> -->
+                                                
                                                     <p>2017-01-01 12:00發表</p>
                                                 </div>
                                             </div>
@@ -354,10 +392,15 @@
 
     <div class="postForumPop">
         <div class="postForumPopBg"></div>
+        <div id="close-btn">
+            <div id="closeIt">CLOSE</div>
+            <img class="closeIco" src="img/close.svg" alt="close icon">
+        </div>
         <div class="editorContainer">
             <form action="">
                 <div class="chooseGroup">
                     <div class="typeChoose">
+                        <span>選擇貼文類型</span>
                         <input type="radio" name="type" id="editorType01" value="1">
                         <label for="editorType01">綜合討論</label>
                     </div>
@@ -370,10 +413,12 @@
                         <label for="editorType03">觀星設備</label>
                     </div>
                 </div>
-                <input type="text" id="editorTitle" placeholder="在此輸入標題">
+                <input type="text" id="editorTitle" placeholder="輸入貼文標題">
                 <textarea name="editor" id="editor" cols="80" rows="100"></textarea>
-                <input type='button' value='送出' id="editorSubmit">
-                <input type='reset' value='清除' id="editorReset">
+                 <div style="position: relative;text-align: center;">
+                    <input type='button' value='送出' id="editorSubmit">
+                    <input type='reset' value='清除' id="editorReset">
+                </div>
             </form>
         </div>
         <script>

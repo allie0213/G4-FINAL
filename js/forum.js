@@ -417,6 +417,9 @@ $(document).ready(function() {
     $('.postForumPopBg').click(function() {
         $(this).parent('.postForumPop').css('display', 'none');
     })
+      $('#close-btn').click(function() {
+        $(this).parent('.postForumPop').css('display', 'none');
+    })
     $('#postForum a').click(function(e) {
             e.preventDefault;
             $('.postForumPop').css('display', 'block');

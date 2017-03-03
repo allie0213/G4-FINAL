@@ -152,12 +152,13 @@
     .colorful-tab-wrapper.flatline .colorful-tab-menu-item a {
       transition: box-shadow .3s ease 0s, opacity .3s ease 0s;
       opacity: .5; 
-      font-size: 20px;}
+      font-size: 22px;
+      font-weight: 800;}
     .colorful-tab-wrapper.flatline .colorful-tab-menu-item.active a {
       background: none;
       opacity: 1;
       box-shadow: 0 -2px 0 #0cbbc7 inset; }
 
-/*@media (max-width: 767px) {
-  .colorful-tab-menu {
-    flex-direction: column; } }*/
+@media (max-width: 767px) {
+  .colorful-tab-wrapper.flatline {
+  padding: 0px; }}

@@ -35,7 +35,7 @@ $(document).ready(function(){
 	})
 
 	.setTween(descout)
-	.addIndicators({name:"2"})
+	// .addIndicators({name:"2"})
 	.addTo(controller);
 
 })
