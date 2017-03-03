@@ -2,38 +2,88 @@
 header('Content-Type: application/json; charset=UTF-8');
 
 
+switch( $_FILES["YouFile"]["error"]){
+	case 0:
+
+		$from = $_FILES["YouFile"]["tmp_name"];
+
+		if( file_exists("../upload")==false){ 
+	        mkdir("../upload");
+		}
+      
+        $fileName = $_FILES["YouFile"]["name"];
+
+       
+		$to = "../upload/". mb_convert_encoding($fileName,"UTF-8");
+		
+		if(copy( $from, $to) ){
+			echo "上傳成功";
+		}else{
+			echo "error";
+		}
+		break;
+	case 1:
+	    echo "檔案不得超過", ini_get("upload_max_filesize");
+		break;
+	case 2:
+		echo "檔案不得超過", $_REQUEST["MAX_FILE_SIZE"];
+		break;
+	case 3:
+		echo "上傳檔案不完整";
+		break;
+	case 4:
+	    echo "檔案没送<br>";
+	     break;
+	default : 
+	    echo "錯誤代碼:" , $_FILES["YouFile"]["error"],"請通知系統人員<br>";
+	     break;
+
+}
+
+
+
+
+
+
 try{
 
-
 require_once("connect.php");
-$sql="insert into plaMsg (plaMsg_no,mem_no,pla_no,plaMsg_content,plaMsg_date) value (:plaMsg_no,:mem_no,:pla_no,:plaMsg_content,:plaMsg_date)";
-$msg = $pdo ->prepare($sql);
-$msg->bindValue(':plaMsg_no',null);
-$msg->bindValue(':mem_no',$_POST['memNo']);
-$msg->bindValue(':pla_no',$_POST['plaNo']);
-$msg->bindValue(':plaMsg_content',nl2br($_POST['msgContent']));
-$msg->bindValue(':plaMsg_date',date("Y-m-d h:i"));
-$msg->execute();
-
-$sql1="SELECT plaMsg.plaMsg_no,plaMsg.plaMsg_content content,plaMsg.plaMsg_date msgDate,mem.mem_name,mem.mem_img from pla,plaMsg,mem where pla.pla_no=plaMsg.pla_no and mem.mem_no = :mem_no and  plaMsg.plaMsg_content=:plaMsg_content order by plaMsg.plaMsg_date";
-$msg1 = $pdo ->prepare($sql1);
-$msg1->bindValue(':mem_no',$_POST['memNo']);
-// $msg1->bindValue(':pla_no',$_POST['plaNo']);
-$msg1->bindValue(':plaMsg_content',nl2br($_POST['msgContent']));
-$msg1->execute();
-$msgRow = $msg1 ->fetch(PDO::FETCH_ASSOC);
+// $sql="insert into pho (pho_no,pho_name,mem_no,pho_info,pho_date,pho_path,pho_share,pho_collect,pho_report,pho_view,pho_loc,pho_tag) value
+// (:pho_no,:pho_name,:mem_no,:pho_info,:pho_date,:pho_path,:pho_share,:pho_collect,:pho_report,:pho_view,:pho_loc,:pho_tag)";
 
 
-$sql2="UPDATE pla set pla_msg = pla_msg+1 where pla_no = :pla_no";
-$msg2 = $pdo ->prepare($sql2);
-$msg2->bindValue(':pla_no',$_POST['plaNo']);
-$msg2->execute();
+
+$fileName = $_FILES["YouFile"]["name"];
+$path = "upload/". mb_convert_encoding($fileName,"UTF-8");
 
 
-echo json_encode($msgRow );
+// $sql = "insert into pho (pho_no,pho_name,mem_no,pho_info,pho_date,pho_path,pho_share,pho_collect,pho_report,pho_view,pho_loc,pho_tag) value (:pho_no,:pho_name,:mem_no,:pho_info,:pho_date,:pho_path,:pho_share,:pho_collect,:pho_report,:pho_view,:pho_loc,:pho_tag)";
+$sql = "insert into pho (pho_no,pho_name,mem_no,pho_info,pho_date,pho_path,pho_share,pho_collect,pho_report,pho_view,pho_loc,pho_tag) value (:pho_no,:pho_name,:mem_no,:pho_info,:pho_date,:pho_path,:pho_share,:pho_collect,:pho_report,:pho_view,:pho_loc,:pho_tag)";
+
+
+$pho = $pdo->prepare($sql);
+$pho->bindValue(':pho_no',null);
+$pho->bindValue(':pho_name',$_POST['photoName']);
+$pho->bindValue(':mem_no',$_POST['memNo']);
+$pho->bindValue(':pho_info',$_POST['content']);
+$pho->bindValue(':pho_date',date("Y-m-d"));
+$pho->bindValue(':pho_path',$path);
+$pho->bindValue(':pho_share',0);
+$pho->bindValue(':pho_collect',0);
+$pho->bindValue(':pho_report',0);
+$pho->bindValue(':pho_view',0);
+$pho->bindValue(':pho_loc',$_POST['photoLoc']);
+$pho->bindValue(':pho_tag',$_POST['photoTag']);
+$pho->execute();
+
+
+// echo "ok";
+echo json_encode(array('msg' => 'ok' ));
+header ( 'Location:../photo.html');
+exit;
 
 }catch(PDOException $e){
-    echo $e->getMessage();
+    echo $e->getMessage()."行號".$e->getLine();
 }
 
 

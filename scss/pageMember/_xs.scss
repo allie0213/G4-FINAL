@@ -108,10 +108,6 @@
 					width: 100%;
 					padding-bottom: 50px;
 
-					.lightbox-main{
-						padding-bottom: 100px;
-					}
-
 				}
 
 				.account_info{
@@ -146,13 +142,7 @@
 			}
 
 			.m_activity_table{
-				height: 500px;
-				
-			}
-			.m_act_box{
-				margin-bottom: 30px;
-				height: auto;
-				padding-bottom: 20px;
+				.m_act_box{
 					.m_act_photo{
 						width: 100%;
 
@@ -164,14 +154,9 @@
 
 					.m_act_info{
 						width: 100%;
-						text-align: center;
-					}
-
-					.f_btn{
-						margin-top: 20px;
-						text-align: center;
 					}
 				}
+			}
 
 			.m_post_box{
 				width: 100%;
@@ -204,25 +189,6 @@
 
 	#ff_lightbox{
 		// overflow: auto;
-	}
-
-	.m_photos{
-		
-		.photo-gallery{
-			margin-bottom: 60px;
-			.box{
-				margin-bottom: 20px;
-
-				.text{
-					bottom: 1px;
-				}
-
-				.edit{
-					display: block;
-					font-size: 25px;
-				}
-			}
-		}
 	}
 
 
