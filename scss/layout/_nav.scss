@@ -1,9 +1,11 @@
-
+*{
+    // outline: 1px solid red;
+}
 #nav {
     height: 80px;
     width: 100%;
-    background: linear-gradient(to right, #0c3458 0%, rgba(29, 34, 60,.8) 40%, rgba(21, 22, 31, 0.7) 80%);
-	box-shadow: 1px 1px 30px #000;
+    background: linear-gradient(to right, rgba(12, 52, 88,0.1) 0%,  rgba(29, 34, 60,.8)30%,rgba(134, 212, 245, .3) 80%, rgba(29, 34, 60,.8) 100%);
+	box-shadow: 1px 1px 20px rgba(0,0,0,.6);
     position: fixed;
     top: 0;
     left: 0;

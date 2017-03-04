@@ -39,6 +39,7 @@
 			font-size: $fz-h2;
 			color: #fff;
 			padding-bottom: 50px;
+			font-weight: 500;
 			text-shadow: 3px 3px 20px rgba(255,255,255,.6);
 		}
 
@@ -47,6 +48,8 @@
 			color: rgba(255,255,255,.8);
 			text-shadow: 1px 1px 5px rgba(0,0,0,.8);
 			text-align: justify;
+			font-weight: 500;
+			line-height: 1.5em;
 		}
 
 	}
@@ -142,6 +145,7 @@
 				font-size: 18px;
 				color: rgba(255,255,255,.6);
 				text-shadow: 1px 1px 5px rgba(0,0,0,.8);
+				font-weight: 400;
 			}
 			.box{
 				padding: 20px 40px;
@@ -158,17 +162,19 @@
 				}
 			}
 			.o-title{
-				font-size: 18px;
+				font-size: 20px;
 				color: rgba(241, 215, 130, 1);
+				font-weight: 500;
 				text-shadow: 1px 1px 20px rgba(255,255,255,.8);
 			}
 
 			.o-desc{
-				font-size: 15px;
+				font-size: 16px;
 				margin-top: 10px;
 				color: rgba(255,255,255,.7);
 				text-align: justify;
-				letter-spacing: .02em;
+				letter-spacing: .05em;
+				font-weight: 400;
 			}
 		}
 	}
@@ -207,6 +213,7 @@
 				text-align: justify;
 				text-shadow: 1px 1px 5px rgba(0,0,0,.8);
 				font-size: 18px;
+				font-weight: 400;
 			}
 
 			h4{
@@ -338,7 +345,7 @@
 				color: rgba(255,255,255,.8);
 				margin-bottom: 60px;
 				font-size: 18px;
-				// font-weight: 700;
+				font-weight: 400;
 			}
 			.box{
 				padding: 10px;
@@ -358,8 +365,8 @@
 				}
 			}
 			.o-title{
-				font-size: 18px;
-				font-weight: 700;
+				font-size: 20px;
+				// font-weight: 700;
 				color: rgba(241, 215, 130, .8);
 				text-shadow: 1px 1px 20px rgba(255,255,255,.8);
 			}
@@ -536,7 +543,8 @@
 				text-shadow: 1px 1px 10px rgba(0,0,0,.6);
 				margin-bottom: 30px;
 				font-size: 18px;
-				font-weight: 700;
+				font-weight: 500;
+				line-height: 1.5em;
 			}
 			
 		}

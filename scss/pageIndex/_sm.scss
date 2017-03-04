@@ -140,7 +140,7 @@
           position: relative;
           text-align: center;
           margin: 50px auto;
-          width: 93%;
+          width: 95%;
           height: 70px;
           line-height:70px;
           background-color: $o-black;
@@ -156,6 +156,7 @@
               padding: 5px 0px 0px 15px;
             }
             input{
+              width: 100px;
               height: 30px;
     					border-radius: 5px;
     					padding: 3px;
