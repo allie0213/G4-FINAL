@@ -1,7 +1,7 @@
 @include respones(md) {
     #logo {
         float: left;
-        width: 12%;
+        width: 15%;
         padding-top: 15px;
         padding-left: 50px;
     }
@@ -16,7 +16,7 @@
             position: relative;
         }
         &.menu {
-            width: 72%;
+            width: 65%;
             text-align: right;
             a {
                 display: block;
@@ -63,9 +63,10 @@
             }
         }
         &.signArea {
-            width: 14%;
+            width: 20%;
             text-align: center;
             padding-right: 40px;
+            position: relative;
             a {
                 display: block;
                 font-size: 15px;
@@ -83,19 +84,26 @@
             }
              .subMenu{
                 position:absolute;
-                top: 80px;right: 70px;
-                background:rgba(29, 34, 60,.8);
-                width:180px;
+                top: 80px;
+                left: 0px;
+                background:rgba(29, 34, 60, 0.5);
+                 box-shadow: 1px 1px 5px #000;
+                width:200px;
                 text-align:center;
-                opacity: 0;
+                opacity: 1;
                 transition: .5s;
+                padding: 20px;
                 li{
                     display:block;
                     a{
                         padding:10px 10px;
                         border: 0px;
+
+                        .fa{
+                            margin-right: 5px;
+                        }
+                    }
                 }
-            }
             &.show{
               opacity: 1;
               transition: .5s;
@@ -124,10 +132,13 @@
         }
         #signRight a {
             // background-color: rgba(218, 175, 115, 1);
-            border: 1px solid #f3d4a9;
-            color: #f3d4a9;
-            text-shadow: 0px 0px 3px $grey;
-            font-weight: 500;
+                border: 2px solid #f3d4a9;
+                color: #f3d4a9;
+                text-shadow: 0px 0px 3px #3e3e43;
+                font-weight: 500;
+                border-radius: 50%;
+                font-size: 20px;
+                width: 100%;
             &:hover {
                 background-color: #f3d4a9;
                 border: 1px solid rgba(218, 175, 115, 0.6);

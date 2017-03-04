@@ -31,6 +31,7 @@
         }
     }
     .mainMenu {
+        padding: 20px;
         li {
             display: inline-block;
             position: relative;
@@ -43,7 +44,7 @@
             width: 100%;
             text-align: center;
             // display: none;
-            background-color: $black;
+            background-color: rgba(0, 0, 0, 0.8);
             transition:.7s;
             z-index:99;
             li {
@@ -52,9 +53,9 @@
             }
             a {
                 display: block;
-                color: $white;
+                color: rgba(255,255,255,.8);
                 font-size: $fz-nav;
-                padding: 50px 10px;
+                padding: 30px 10px;
                 letter-spacing: 1.2px;
                 // font-weight: 800;
             }
@@ -67,8 +68,8 @@
         }
         &.signArea {
             position:absolute;
-            right:10px;
-            top:10px;
+            right: -6px;
+            top: -7px;
             text-align: center;
             a {
                 display: block;
@@ -78,7 +79,7 @@
                 padding: 10px 10px;
                 margin-top: 5px;
                 margin-right: 5px;
-                font-weight: 800;
+                // font-weight: 800;
                 border: 1px solid rgba(218, 175, 115, 0.6);
                 &:hover {
                     color: rgba(218, 175, 115, 1);
@@ -107,16 +108,51 @@
             cursor: pointer;
             margin-top:5px;
         }
+
+        #signLeft{
+            display: none;
+        } 
         #signRight a {
-            // background-color: rgba(218, 175, 115, 1);
-            border: 1px solid rgba(218, 175, 115, 1);
-            color: rgba(218, 175, 115, 1);
-            text-shadow: 0px 0px 3px $grey;
+            // border: 1px solid #f3d4a9;
+                color: #f3d4a9;
+                text-shadow: 0px 0px 3px #3e3e43;
+                font-weight: 500;
+                border-radius: 50%;
+                font-size: 16px;
+                width: 100%;
             &:hover {
                 background-color: rgba(218, 175, 115, 0);
-                border: 1px solid rgba(218, 175, 115, 0.6);
+                // border: 1px solid rgba(218, 175, 115, 0.6);
                 color: rgba(218, 175, 115, 1);
             }
         }
     }
+
+    //03/03 
+#nav{
+    .subMenu{
+        position: absolute;
+        width: 200px;
+        top: 70px;
+        right: 0px;
+        background:rgba(29, 34, 60, 0.5);
+        box-shadow: 1px 1px 5px #000;
+        padding: 20px;
+
+        li{
+            display: block;
+
+            a{
+                border: 0px solid #fff;
+                color: rgba(218, 175, 115, 1);
+
+            }
+
+            .fa{
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
 }
