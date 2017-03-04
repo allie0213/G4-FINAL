@@ -1,0 +1,6 @@
+._mobile.html
+*.html
+*.js
+libs/
+*._php
+._.png

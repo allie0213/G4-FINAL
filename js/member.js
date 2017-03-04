@@ -11,15 +11,15 @@ $(document).ready(function(){
 			transition:'.5s linear'
 		});
 		var count = $(this).index();
-		console.log(count);
-		$('.m_content>li:eq('+count+')').fadeIn(1000).siblings().fadeOut(500);
-		$('.m_sub_nav>li:eq('+count+')').addClass('selected').siblings().removeClass('selected');
+		// console.log(count);
+		$('.m_content li:eq('+count+')').fadeIn(1000).siblings().fadeOut(500);
+		$('.m_sub_nav li:eq('+count+')').addClass('selected').siblings().removeClass('selected');
 		
 	})
 //燈箱內點擊
 	$('.m_sub_nav li').click(function(){
 			var count = $(this).index();
-			// console.log(count);
+			console.log(count);
 			$(this).addClass('selected').siblings().removeClass('selected');
 			$('.m_content>li:eq('+count+')').delay(500).fadeIn(1000).siblings().fadeOut(500);
 		})
