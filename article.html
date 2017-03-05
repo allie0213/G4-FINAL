@@ -25,17 +25,18 @@
 	<!-- this page's js -->
 	<script src="js/f_lightbox.js"></script>
 	<script src="js/article.js"></script>
+	<script src="js/nav2.js"></script>
 
 	<style type="text/css">
-		*{
+	/*	*{
 			outline: none;
 			margin: 0;
 			padding: 0;
 			list-style: none;
 			box-sizing: border-box;
-		}
+		}*/
 
-		body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+		/*body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } */
 
 		canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ 
 
@@ -114,31 +115,50 @@
 <body id="kn_wrapper">
 <!-- 導覽列 -->
 <nav id="nav">
-	<div class="relative">
-		<div class="row">
-			<input type="checkbox" id="navButtonHidden">
-			<label id="navButton" for="navButtonHidden"></label>
-			<div id="logo">
-				<a href="#"><img src="img/logo.png" alt="ZeroGravity"></a>
-			</div>
-			<ul class="mainMenu menu">
-				<li><a href="activity.html">觀星活動</a></li>
-				<li><a href="forum.html">星際論壇</a></li>
-				<li><a href="photo.html">照片牆</a></li>
-				<li><a href="article.html" class="onThisPage">星知識</a></li>
-			</ul>
-			<ul class="mainMenu signArea">
-				<li id="signLeft">
-					<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-					<span><a href="#">註冊</a></span>
-				</li>
-				<li id="signRight">
-					<span><a href="member.html">登入</a></span>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
+        <div class="relative">
+            <div class="row">
+                <div id="ham">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div id="logo">
+                    <a href="home.html"><img src="img/logo.png" alt="ZeroGravity"></a>
+                </div>
+                <ul class="mainMenu menu">
+                    <li><a href="activity.php">觀星活動</a></li>
+                    <li><a href="forum.html">星際論壇</a></li>
+                    <li><a href="photo.html">照片牆</a></li>
+                    <li><a href="article.html" class="onThisPage">星知識</a></li>
+                    <li><a href="for_newer.html">觀星指南</a></li>
+                </ul>
+                <ul class="mainMenu signArea">
+                    <ul class="subMenu">
+                        <li><a href="member.html"><i class="fa fa-user-circle" aria-hidden="true"></i>會員專區</a></li>
+                        <li><a href="#"><i class="fa fa-wpexplorer" aria-hidden="true"></i>我的活動</a></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-grav" aria-hidden="true"></i>我的貼文</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-camera" aria-hidden="true"></i>
+                        我的照片</a></li>
+                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>我的收藏</a></li>
+                        <li><a href="#" id="logOut">登出</a></li>
+                    </ul>
+                    <li id="navMemPhoto">
+                        <img src="">
+                    </li>
+                    <li id="navMemInfo">
+                        <span id="navMemberName"></span>
+                    </li>
+                    <li id="signLeft">
+                        <span><a href="#" id="navSignup">註冊</a></span>
+                    </li>
+                    <li id="signRight">
+                        <span><a href="#" id="navLogin"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 <!-- 導覽列結束 -->
 
 <!-- background-image -->
