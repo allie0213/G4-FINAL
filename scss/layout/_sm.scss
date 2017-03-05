@@ -139,6 +139,7 @@
         padding: 20px;
         opacity: 0;
         transition: .5s;
+        display: none;
 
         li{
             display: block;
@@ -150,6 +151,7 @@
 
          &.show{
               opacity: 1;
+              display: block;
               transition: .5s;
             }
     }

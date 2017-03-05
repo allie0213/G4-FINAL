@@ -93,6 +93,7 @@
                 opacity: 0;
                 transition: .5s;
                 padding: 20px;
+                display: none;
                 li{
                     display:block;
                     a{
@@ -107,6 +108,7 @@
             &.show{
               opacity: 1;
               transition: .5s;
+              display: block;
             }
         }
     }
