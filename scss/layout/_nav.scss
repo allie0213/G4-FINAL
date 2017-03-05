@@ -11,11 +11,22 @@
     left: 0;
     z-index: 100000;
 
-    .subMenu{
-        display: none;
-        // opacity: 0;
-       
+    .mainMenu{
+        .signArea{
+
+            .subMenu{
+                // opacity: 0;
+                // display: block;
+
+                 // &.show{
+                 //      opacity: 1;
+                 //      transition: .5s;
+                 //    }
+               
+            }
+        }
     }
+    
 }
 #navButton {
     position: absolute;

@@ -22,9 +22,16 @@
     <script src="js/forum.js"></script>
     <script src="js/f_lightbox.js"></script>
     <script src="js/nav2.js"></script>
-    
+
     <!-- this is editor -->
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#navMemPhoto').click(function(){
+               $('.subMenu').toggleClass('show');
+            })
+        });
+    </script>
     <style type="text/css">
         * {
             /*outline: 1px solid red;*/

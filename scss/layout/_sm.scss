@@ -137,6 +137,8 @@
         background:rgba(29, 34, 60, 0.3);
         box-shadow: 1px 1px 5px #000;
         padding: 20px;
+        opacity: 0;
+        transition: .5s;
 
         li{
             display: block;
@@ -145,6 +147,11 @@
                 margin-right: 5px;
             }
         }
+
+         &.show{
+              opacity: 1;
+              transition: .5s;
+            }
     }
 
 }
