@@ -10,6 +10,12 @@
     top: 0;
     left: 0;
     z-index: 100000;
+
+    .subMenu{
+        display: none;
+        // opacity: 0;
+       
+    }
 }
 #navButton {
     position: absolute;

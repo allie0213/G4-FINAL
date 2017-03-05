@@ -92,7 +92,7 @@
             .i-lightboxBg {
                 width: 100%;
                 height: 100%;
-                background-color: transparent;
+                background-color: rgba(0,0,0,.6);
             }
             #loginConfirmPsw,
             #loginMemName {
@@ -109,24 +109,26 @@
                 width: 90%;
                 max-width:400px;
                 text-align: center;
-                border-radius: 5px;
+                // border-radius: 5px;
                 box-shadow: 0px 0px 10px 1px $white;
                 display: none;
                 h4 {
-                    font-size: $fz-h4;
+                    font-size: 22px;
                     padding: 15px 20px;
-                    color: $white;
+                    color: rgba(255,255,255,.9);
                     text-shadow: 1px 1px 1px $black;
+                    font-weight: 800;
                 }
                 input {
                     border: none;
                     height: 40px;
                     width: 80%;
                     max-width: 320px;
-                    border-radius: 5px;
+                    border-radius: 4px;
                     margin: 10px auto;
                     font-size: 16px;
                     padding: 0px 15px;
+                    background-color: rgba(255,255,255,.8);
                     &:active,
                     &:focus {
                         outline: 0;
@@ -135,7 +137,7 @@
                 .searchBar-btn {
                     display: inline-block;
                     @include btn(90px, 34px, 5px, 18px);
-                    background-color: $blue;
+                    background-color:rgba(79,156,221,.7);
                     box-shadow: 1px 2px 5px #111;
                     position: relative;
                     bottom: 0;
@@ -146,11 +148,11 @@
                     line-height: $fz-p;
                     color: $white;
                     text-shadow: 1px 1px 3px $grey;
-                    font-size: $fz-p;
+                    font-size: 15px;
                     a {
                         color: $white;
                         text-shadow: 1px 1px 3px $grey;
-                        font-size: $fz-p;
+                        font-size: 15px;
                     }
                 }
                 .logOn {
@@ -158,6 +160,7 @@
                     bottom: 0;
                     right: 0;
                     padding: 10px;
+                    padding-top: 20px;
                     color: $white;
                     cursor: pointer;
                     text-shadow: 1px 1px 1px $black;
@@ -180,12 +183,13 @@
                 .sectionTitle {
                     margin: auto;
                     padding-top: 100px;
+                    padding-bottom: 30px;
                     h1 {
-                        font-size: $fz-h3;
+                        font-size: 26px;
                         text-align: center;
                         // padding: 10px 20px;
                         a {
-                            color: $white;
+                            color: #fff;
                             text-shadow: 1px 1px 10px $white;
                         }
                     }
@@ -196,6 +200,10 @@
                         display: none;
                     }
                 }
+            }
+            .section{
+                padding-left: 20px;
+                padding-right: 20px
             }
             .section01 {
                 top: 0vh;
@@ -239,14 +247,14 @@
                     padding-top: 50px;
                     h1 {
                         color: $white;
-                        font-size: $fz-h3;
+                        font-size: 32px;
                         padding: 10px 0px;
-                        text-shadow: 1px 10px 10px $black;
+                        text-shadow: 1px 10px 10px #fff;
                         text-align: center;
                     }
                     h2{
-                      color: $white;
-                        font-size: $fz-h4;
+                      color: rgba(255,255,255,.8);
+                        font-size: 22px;
                         padding: 10px 0px;
                         text-shadow: 1px 10px 10px $black;
                         text-align: center;
@@ -272,14 +280,15 @@
                                 }
                                 width: 80%;
                                 height: 30px;
-                                font-size: 16px;
-                                line-height: 16px;
-                                border-radius: 5px;
+                                font-size: 15px;
+                                border-radius: 4px;
                                 color:$black;
                                 border: $white;
                                 margin: auto 8px;
-                                padding: 10px;
+                                // padding: 10px;
                                 background-color: $white;
+                                line-height: 30px;
+                                letter-spacing: 0.08em;
                                 &:focus {
                                     outline: none;
                                 }
@@ -311,16 +320,17 @@
                             &::-webkit-input-placeholder {
                                 color: $blue;
                             }
-                            height: 40px;
-                            font-size: 16px;
+                            height: 38px;
+                            font-size: 15px;
                             line-height: 16px;
-                            border-radius: 5px;
+                            border-radius: 4px;
                             color:$black;
                             border: $white;
                             margin: auto 8px;
                             padding: 10px;
                             background-color: $white;
                             width: 195px;
+                            // letter-spacing: 0.08em;
                             &:focus {
                                 outline: none;
                             }
@@ -363,16 +373,19 @@
                             }
                             ul {
                                 position: absolute;
-                                bottom: -150px;
-                                left: 96px;
+                                bottom: -152px;
+                                left: 85px;
                                 right: 0;
                                 display: none;
                                 width: 50%;
                                 text-align: center;
                                 z-index: 4;
+                                font-size: 15px;
+                                
                                 li {
+
                                     &:first-child {
-                                        border-radius: 5px 5px 0px 0px;
+                                        // border-radius: 5px 5px 0px 0px;
                                     }
                                     &:last-child {
                                         border-radius: 0px 0px 5px 5px;
@@ -384,7 +397,7 @@
                                     width: 98%;
                                     line-height: normal;
                                     background-color: $white;
-                                    color:$black;
+                                    color: $blue;
                                     padding:10px 5px;
                                     cursor: pointer;
                                 }
@@ -396,10 +409,10 @@
                             34px,
                             5px,
                             14px);
-                            background-color: $blue;
+                            background-color: rgba(79,156,221,.7);
                             box-shadow: 1px 2px 5px #111;
                             position: relative;
-                            bottom: 0px;
+                            bottom: -20px;
                             left: 0;
                             right: 0;
                             margin: auto;
@@ -407,7 +420,7 @@
                             a {
                                 color: $white;
                                 text-shadow: 1px 1px 3px $grey;
-                                font-size: $fz-p +2px;
+                                font-size: 15px;
                             }
                         }
                     }
@@ -436,7 +449,7 @@
                 }
             }
             .section02 {
-                background: url('../img/index/bg-sky.jpg') 50% 0% repeat;
+                background: radial-gradient(ellipse at center, #1a4b79 0%, #151c3c 30%, #090a0f 60%, black 80%);
                 background-size: cover;
                 top: -100vh;
                 #cloud1 {
@@ -475,7 +488,7 @@
                         position: absolute;
                         width: 100%;
                         top: 100px;
-                        left: 2%;
+                        left: -5%;
                         right: 0;
                         margin: auto;
                         transition: 1s;
@@ -491,12 +504,13 @@
                         }
                         h3 {
                             font-size: $fz-h4;
-                            color: $black;
+                            color: #333;
                             padding: 5px 0;
                         }
                         p {
                             font-size: 16px;
-                            color: $black;
+                            color: #333;
+                            font-weight: 600;
                         }
                         img {
                             width: 100%;
@@ -514,15 +528,16 @@
                         }
                         .content {
                             position: absolute;
-                            right: 5%;
+                            right: -5%;
                             bottom: -5px;
                             z-index: 3;
                             cursor: pointer;
+                            text-align: center;
                             &.content2 {
-                                right: 10%;
+                                right: 5%;
                             }
                             &.content3 {
-                                right: 0%;
+                                right: -10%;
                             }
                         }
                         .img-collection {
@@ -549,7 +564,7 @@
                 }
             }
             .section03 {
-                background: url('../img/index/bg-sky.jpg') 50% 100% repeat;
+                background: radial-gradient(ellipse at center, #1a4b79 0%, #151c3c 30%, #090a0f 60%, black 80%);
                 background-size: cover;
                 top: -200vh;
                 .forumGroup {
@@ -567,12 +582,12 @@
                         width: 300px;
                         height: 80px;
                         transform-style: preserve-3d;
-                        transition: .8s;
+                        transition: 1s;
                         cursor: pointer;
                         // animation:boxRotate 2s;
                         &.rotate {
                             transform: rotateX(-180deg);
-                            transition: .6s;
+                            transition: 1s;
                         }
                         // animation:boxRotate 5s infinite linear;
                         .forum {
@@ -586,7 +601,7 @@
                             width: 100%;
                             height: 100%;
                             letter-spacing: 1px;
-                            background-color: rgba(0, 0, 0, 0.2);
+                            background-color: rgba(0, 0, 0, 0.9);
                             box-shadow: 0px 0px 3px $white;
                             backface-visibility: hidden;
                             transform: translateZ(40px);
@@ -594,7 +609,7 @@
                                 padding: 15px 25px;
                                 line-height: 25px;
                                 h4 {
-                                    font-size: 20px; //md
+                                    font-size: 18px; //md
                                     padding-bottom: 3px;
                                 }
                             }
@@ -670,7 +685,7 @@
                 }
             }
             .section04 {
-                background: url('../img/index/bg-sky.jpg') 50% 0% repeat;
+                background: radial-gradient(ellipse at center, #1a4b79 0%, #151c3c 30%, #090a0f 60%, black 80%);
                 background-size: cover;
                 top: -300vh;
                 perspective: 2200px;
@@ -814,7 +829,7 @@
                 }
             }
             .section05 {
-                background: url('../img/index/bg-sky.jpg') 50% 0% repeat;
+                background: radial-gradient(ellipse at center, #1a4b79 0%, #151c3c 30%, #090a0f 60%, black 80%);
                 background-size: cover;
                 top: -400vh;
                 .accordion {

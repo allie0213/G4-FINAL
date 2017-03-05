@@ -13,9 +13,11 @@ $(document).ready(function(){
     }
   })
 
-
+//會員頭像點擊後出現會員專區選單&登出按鈕
 $('#navMemPhoto').click(function(){
-      $('.subMenu').toggleClass('show');
+      // $('.subMenu').toggleClass('show');
+      $('.subMenu').slideToggle(500);
+
     })
 
 
